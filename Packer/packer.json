@@ -1,0 +1,19 @@
+{
+    "builders": [
+      {
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "WordPress-with-PostgreSQL-{{timestamp}}",
+        "source_ami": "ami-053b0d53c279acc90",
+        "ssh_private_key_file": "ec2-key.pem",
+        "security_group_id": "sg-0ebe245f745020561",
+        "subnet_id": "subnet-0b110f43bb7a246dd",
+        "run_tags": {
+          "Name": "WordPressInstance"
+        }
+      }
+    ]
+  }
+  
